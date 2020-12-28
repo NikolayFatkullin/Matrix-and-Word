@@ -77,7 +77,8 @@ public class MatrixAndWord {
         return !temporaryResult.equals("Incorrect");
     }
 
-    private boolean isRowsAndColumnsAreCorrect(int matrixLength, int checkedRow, int checkedColumn) {
+    private boolean isRowsAndColumnsAreCorrect(int matrixLength, int checkedRow,
+                                               int checkedColumn) {
         return checkedRow >= 0 && checkedRow < matrixLength
                 && checkedColumn >= 0 && checkedColumn < matrixLength;
     }
