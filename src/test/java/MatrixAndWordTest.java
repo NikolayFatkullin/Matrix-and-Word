@@ -69,9 +69,22 @@ class MatrixAndWordTest {
                 thirdExpected, thirdActual));
         String fourthExpected = "No matches founded!";
         String fourthActual = matrix.getSequence("EQWEAfSDFFXZGFQWQoLCKAZXCCASWe)Vf@COFNVDDu(4N#"
-                        + "YGDBCERg17gSAVPDSWTAG%YLPQaqVAAEUGxTKFdwXSMLEXM[JWneVASeOBNGJDerXZXa"
+                + "YGDBCERg17gSAVPDSWTAG%YLPQaqVAAEUGxTKFdwXSMLEXM[JWneVASeOBNGJDerXZXa"
                 + "FCDFHXgtXZNgLMD]GAelfoeueGeER)", "PHENOMENA");
         assertEquals(fourthExpected, fourthActual, String.format("You should return %s, "
+                        + "but you returned %s",
+                fourthExpected, fourthActual));
+        String fifthExpected = "[12,11]->[12,12]->[12,13]->[11,13]->[10,13]->[9,13]->[9,14]"
+                + "->[9,15]->[9,16]->[10,16]->[11,16]->[12,16]->[13,16]->[14,16]->[15,16]->"
+                + "[16,16]->[17,16]->[18,16]->[19,16]->[19,15]->[19,14]->[19,13]->[19,12]->"
+                + "[19,11]->[19,10]->[19,9]->[19,8]";
+        String fifthActual = matrix.getSequence("QWERTYUIOPASDFGHJKLZZXCVBinidutilGHDCVERFDSSZBDQ"
+                + "ERTYiNJYXVWSXGDSAQQQWADAbNHSZYLLVBXZXDAAAXSZaBSASKKZYWQAFSFDZVCXcVCVFGCXEdutil"
+                + "ibacificabilitRASUYIZVBNZiUASLOLFuAFDTSIXCBNXrTETIRWUdSQERFEWASVCoMificDNiSAZZ"
+                + "ZDFJKMMnTRDDaESnSSXCVBGHBNBoRoYFbROiibacifironoHonSFiIFtlYYZYAASFFFFnQMHlTUaiY"
+                + "ZYSAQHDFDSoHGGiINtyZZXXSWFYFQQrWGHtLNTuZFDFSRGSRTFYRYYuLYEdYYFGFTZADFFQRZXdINS"
+                + "iZZXAbcsDAAEARBNiHMTnitatiuasubitatinCLW", "HONORIFICABILITUDINITATIBUS");
+        assertEquals(fifthExpected, fifthActual, String.format("You should return %s, "
                         + "but you returned %s",
                 fourthExpected, fourthActual));
     }

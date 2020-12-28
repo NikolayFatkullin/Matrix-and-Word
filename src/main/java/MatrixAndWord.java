@@ -12,7 +12,7 @@ public class MatrixAndWord {
             return "[0,0]";
         }
         if (Math.sqrt(firstWord.length()) % VARIABLE_TO_CHECK_LENGTH != 0) {
-            throw new RuntimeException("Incorrect size of first word!");
+            throw new RuntimeException("Incorrect size of first word!" + firstWord.length());
         }
         if (secondWord.length() > firstWord.length()) {
             throw new RuntimeException("Incorrect size of second word!");
@@ -46,32 +46,31 @@ public class MatrixAndWord {
 
     private String searchInMatrix(char[][] wordsMatrix, int rows, int columns,
                                   String word, int charIndex) {
-        if (wordsMatrix[rows][columns] != word.charAt(charIndex)) {
-            return "Incorrect";
-        }
-        StringBuilder result = new StringBuilder();
-        result.append(String.format(STRING_FORMAT_FOR_RESULT, rows, columns));
-        if (charIndex >= word.length() - 1) {
-            return result.toString();
-        }
-        char tmp = wordsMatrix[rows][columns];
-        wordsMatrix[rows][columns] = '#';
+        if (wordsMatrix[rows][columns] == word.charAt(charIndex)) {
+            StringBuilder result = new StringBuilder();
+            result.append(String.format(STRING_FORMAT_FOR_RESULT, rows, columns));
+            if (charIndex >= word.length() - 1) {
+                return result.toString();
+            }
+            char tmp = wordsMatrix[rows][columns];
+            wordsMatrix[rows][columns] = '#';
 
-        for (int i = 0; i < 4; i++) {
-            int checkedRow = rows + ROWS_ARRAY_STEPS[i];
-            int checkedColumn = columns + COLUMN_ARRAY_STEPS[i];
-            if (checkedRow >= 0 && checkedRow < wordsMatrix.length
-                    && checkedColumn >= 0 && checkedColumn < wordsMatrix[0].length
-                    && wordsMatrix[checkedRow][checkedColumn] == word.charAt(charIndex + 1)) {
-                String temporaryResult = searchInMatrix(wordsMatrix, checkedRow, checkedColumn,
-                        word, charIndex + 1);
-                if (!temporaryResult.equals("Incorrect")) {
-                    result.append("->").append(temporaryResult);
-                    return result.toString();
+            for (int i = 0; i < 4; i++) {
+                int checkedRow = rows + ROWS_ARRAY_STEPS[i];
+                int checkedColumn = columns + COLUMN_ARRAY_STEPS[i];
+                if (checkedRow >= 0 && checkedRow < wordsMatrix.length
+                        && checkedColumn >= 0 && checkedColumn < wordsMatrix[0].length
+                        && wordsMatrix[checkedRow][checkedColumn] == word.charAt(charIndex + 1)) {
+                    String temporaryResult = searchInMatrix(wordsMatrix, checkedRow, checkedColumn,
+                            word, charIndex + 1);
+                    if (!temporaryResult.equals("Incorrect")) {
+                        result.append("->").append(temporaryResult);
+                        return result.toString();
+                    }
                 }
             }
+            wordsMatrix[rows][columns] = tmp;
         }
-        wordsMatrix[rows][columns] = tmp;
         return "Incorrect";
     }
 }
