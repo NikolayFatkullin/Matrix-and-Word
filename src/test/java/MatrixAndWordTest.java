@@ -14,19 +14,9 @@ class MatrixAndWordTest {
 
     @Test
     public void testForInputNullAndEmpty() {
-        String expected = "";
-        String actual = matrix.getSequence(null, "KING");
-        String secondActual = matrix.getSequence("QWERTSFFT", null);
-        String thirdActual = matrix.getSequence("", "");
-        assertEquals(expected, actual,
-                String.format("You should return empty String, but you returned %s", actual));
-        assertEquals(expected, secondActual,
-                String.format("You should return empty String, but you returned %s", secondActual));
-        assertEquals(expected, thirdActual,
-                String.format("You should return empty String, but you returned %s", thirdActual));
-        String fourthActual = matrix.getSequence("KLKLK", "");
-        assertEquals(expected, fourthActual,
-                String.format("You should return empty String, but you returned %s", fourthActual));
+        assertThrows(RuntimeException.class, () -> matrix.getSequence(null, "KING"));
+        assertThrows(RuntimeException.class, () -> matrix.getSequence("QWERTSFFT", null));
+        assertThrows(RuntimeException.class, () -> matrix.getSequence("", ""));
     }
 
     @Test
