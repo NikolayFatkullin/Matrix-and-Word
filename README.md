@@ -1,5 +1,5 @@
 # Opera Application
-1. [About Application](#About Application)
+1. [About Application](#About)
 2. [Application Structure]()
 3. [Technologies Used]()
 4. [Running the Application]()
