@@ -23,7 +23,7 @@ After solving the task test it carefully with different examples.
 
 
 # Opera Application
-[пример](#Your program should get two parameters from command line:)
+[пример](#Matrix-and-Word)
 
 
 
