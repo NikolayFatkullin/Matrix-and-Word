@@ -1,41 +1,44 @@
-# Matrix-and-Word
-Your program should get two parameters from command line:
-
-string of size N^2, that describes square matrix of characters N*N;
-
-string that describes given word.
-
-The first string is converting to matrix using the following rule. String “QWEASDZXC” forms the matrix:
-
-[‘Q’,’W’,’E’,
-
-‘A’,’S’,’D’,
-
-‘Z’,’X’,’C’]
-
-Your program should print to the console the sequence of cells those build the given word.
-
-Every next character of word can be placed just in the neighbor cell: on the top, on the bottom, on the left or on the right from the cell with previous character.
-
-E.g. if it is given matrix “QLGNAEKIRLRNGEAE” and word “KING”, then sequence of cells will be [1,2]->[1,3]->[0,3]->[0,2]
-
-After solving the task test it carefully with different examples.
-
-
 # Opera Application
-[пример](#Matrix-and-Word)
+1. [About Application](#About Application)
+2. [Application Structure]()
+3. [Technologies Used]()
+4. [Running the Application]()
+5. [Author's contacts]()
+---
+#About Application
+This application is a prototype of online store, where users can buy tickets to the performances.
+***
+#Application Structure
+Application is bases on the N-tier architecture. Application has been developed according to SOLID principles.
+If you look at the project, you will find there:
+- DAO layers;
+- Service layers;
+- Controllers layers;
+- Models;
+- Custom exception to work with the DB;
+- Configurations to the Spring Security, MVC, etc. 
+  
+Also, this project contains 2 roles for users. First role is User. User can:
+- Register on the Application;
+- Log in to the Application;
+- Add tickets for Performance to a shopping cart;
+- Complete his order;
+- View his orders history;
 
+Second role is Administrator. He can:
+- All actions of the usual user; 
+- Add new stages;
+- Add new Performance sessions;
+- Add new Performances;
+- Update information about Performance sessions;
+- Delete information about Performance sessions;
 
-![alt text](https://github.com/NikolayFatkullin/pictures/blob/master/Package%20model.png "Описание будет тут")
+Near you can see, an UML diagram of the project:
+![package_model](https://github.com/NikolayFatkullin/pictures/blob/master/Package%20model.png)
 
-
-
-
-
-
-
-
-
-
-
-Technologies
+***
+#Technologies Used
+***
+#Running the Application
+***
+#Author's contacts
