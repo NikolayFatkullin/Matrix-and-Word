@@ -5,10 +5,10 @@
 4. [Running the Application]()
 5. [Author's contacts]()
 ---
-#About Application
+# About Application
 This application is a prototype of online store, where users can buy tickets to the performances.
 ***
-#Application Structure
+# Application Structure
 Application is bases on the N-tier architecture. Application has been developed according to SOLID principles.
 If you look at the project, you will find there:
 - DAO layers;
