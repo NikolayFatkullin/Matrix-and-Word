@@ -26,10 +26,11 @@ After solving the task test it carefully with different examples.
 [пример](#Matrix-and-Word)
 
 
+![alt text](https://github.com/NikolayFatkullin/pictures/blob/master/Package%20model.png "Описание будет тут")
 
 
 
-https://github.com/NikolayFatkullin/pictures/blob/master/Package%20model.png
+
 
 
 
