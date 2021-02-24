@@ -29,7 +29,7 @@ After solving the task test it carefully with different examples.
 
 
 
-
+https://github.com/NikolayFatkullin/pictures/blob/master/Package%20model.png
 
 
 
