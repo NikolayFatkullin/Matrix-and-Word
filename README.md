@@ -23,7 +23,7 @@ After solving the task test it carefully with different examples.
 
 
 # Opera Application
-[пример](#Technologies)
+[пример](#Your program should get two parameters from command line:)
 
 
 
